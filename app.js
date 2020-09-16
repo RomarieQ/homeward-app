@@ -3,8 +3,12 @@ let express = require('express');
 let app = express();
 let sequelize = require('./db');
 
-app.listen(3002, function(){
-    console.log('App is listening on 3002');
+// app.listen(3002, function(){
+//     console.log('App is listening on 3002');
+// })
+
+app.listen(process.env.PORT, () => {
+    console.log(`server is listening on port ${process.env.PORT}`)
 })
 
 // CONTROLLERS GO HERE
