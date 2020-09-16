@@ -3,8 +3,8 @@ let express = require('express');
 let app = express();
 let sequelize = require('./db');
 
-app.listen(3000, function(){
-    console.log('App is listening on 3000');
+app.listen(3002, function(){
+    console.log('App is listening on 3002');
 })
 
 // CONTROLLERS GO HERE
@@ -24,7 +24,3 @@ app.use('/user', user);
 // PROTECTED ROUTE -- for location enpoints
 app.use(require('./middleware/validate-session'));
 app.use('/location', location);
-
-app.listen(process.env.PORT, function(){
-    console.log(`homeward is listening on ${process.env.PORT} -- lets go home!`);
-})
